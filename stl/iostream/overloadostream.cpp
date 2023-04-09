@@ -14,6 +14,9 @@ public:
     friend ostream& operator<<(ostream& os, const Date& dt);
 };
 
+// The overloaded operator returns a reference to the original ostream
+// object, which means you can combine insertions:
+// cout <<"The date is" <<dt <<flush;
 ostream& operator<<(ostream& os, const Date& dt)
 {
     os << dt.mo << '/' << dt.da << '/' << dt.yr;
